@@ -2,7 +2,13 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "npx nx run-many -t build",
+    "test": "npx nx run-many -t test",
+    "lint": "npx nx run-many -t lint",
+    "parallel": "npx nx run-many -t lint test build --parallel=3",
+    "graph": "npx nx graph"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
